@@ -1,0 +1,13 @@
+{
+  "name": "secondary",
+  "items": [
+    {
+      "text": "Privacy Policy",
+      "link": "/privacy-policy"
+    },
+    {
+      "text": "Contact Us",
+      "link": "/updates"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+.USLayout {
+  .USCallout,
+  .USCards,
+  .USList,
+  .USMarkdown,
+  .carousel-root {
+    @include u-margin-bottom(4);
+  }
+}
+
+.USCards {
+  .usa-card {
+    height: 100%;
+  }
+}
+
+.USFilterControl {
+  @include at-media("tablet") {
+    @include grid-col(11);
+  } 
+  @include at-media("desktop") {
+    @include grid-col('auto');
+  }
+  &__title {
+    font-weight: 700;
+  }
+  &__items {
+    overflow-y: scroll;
+    max-height: 10rem;
+    @include u-padding(1);
+  }
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    @include u-margin(1);
+    cursor: pointer;
+
+    svg {
+      margin-top: 0.25rem;
+    }
+  }
+  &__item-label {
+    @include u-padding-left(2);
+  }
+
+}
+
+.USContentList {
+  &__header {
+    align-items: flex-end;
+    @include u-margin-bottom(2);
+  }
+  &__card {
+    &.usa-card--flag {
+      .usa-card__body {
+        margin-left: 0;
+      }
+    }
+
+    &.usa-card {
+      @include u-margin-bottom(2);
+    }
+
+    .usa-card__container {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &__layout-control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include u-margin-bottom("105");
+
+    .usa-button {
+      @include u-margin-left(2);
+      font-size: 2rem;
+      opacity: 0.7;
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  &__sort-control {
+    display: flex;
+    align-items: center;
+    .usa-select {
+      margin-top: 0;
+    }
+  }
+  &__sort-label {
+    white-space: nowrap;
+    display: inline-block;
+    @include u-padding-right(1);
+  }
+
+  &__filter {
+    &--hidden {
+      display: none;
+      @include at-media("desktop") {
+        display: inline-block;
+      }
+    }
+    &--text {
+      display: none;
+      @include at-media("desktop") {
+        display: inline-block;
+      }
+    }
+    &--button {
+      @include at-media("desktop") {
+        display: none;
+      }
+      @include u-margin-bottom(1);
+    }
+  }
+}

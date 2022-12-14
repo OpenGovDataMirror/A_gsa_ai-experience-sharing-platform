@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_content_callouts",
+  "info": {
+    "name": "Callout",
+    "icon": "columns",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "className": {
+      "type": "string"
+    },
+    "fullwidth": {
+      "type": "boolean"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "number",
+        "checkmark"
+      ],
+      "required": true,
+      "default": "checkmark"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content.markdown",
+      "max": 3,
+      "min": 1
+    }
+  }
+}

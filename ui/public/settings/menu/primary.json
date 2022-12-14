@@ -1,0 +1,45 @@
+{
+  "name": "primary",
+  "items": [
+    {
+      "text": "Use Cases",
+      "link": "/library/usecase"
+    },
+    {
+      "text": "Resources",
+      "items": [
+        {
+          "text": "Terminology",
+          "link": "/library/resource#category=terminology"
+        },
+        {
+          "text": "Framework for AI Success",
+          "link": "/library/resource#category=framework"
+        },
+        {
+          "text": "AI Project Processes",
+          "link": "/library/resource#category=processes"
+        },
+        {
+          "text": "All Resources",
+          "link": "/library/resource"
+        }
+      ],
+      "link": "/resource"
+    },
+    {
+      "text": "About",
+      "items": [
+        {
+          "text": "AI in Government",
+          "link": "/about-artificial-intelligence"
+        },
+        {
+          "text": "History",
+          "link": "/history"
+        }
+      ],
+      "link": "/about"
+    }
+  ]
+}

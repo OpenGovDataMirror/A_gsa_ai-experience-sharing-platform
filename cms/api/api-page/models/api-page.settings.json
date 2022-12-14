@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Page",
+  "info": {
+    "name": "api-page",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "content.list",
+        "content.markdown",
+        "content.callout",
+        "content.cards",
+        "content.carousel",
+        "usecase.usecase-list",
+        "content.content-list",
+        "content.hero"
+      ]
+    }
+  }
+}

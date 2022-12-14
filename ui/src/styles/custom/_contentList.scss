@@ -1,0 +1,32 @@
+.usa-content-list--vertical {
+    .usa-card__footer {
+        .usa-button {
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+            @include u-padding-left(4);
+            @include u-padding-right(4);
+        }
+    }
+    .usa-card__heading a {
+        text-decoration: none;
+        color: color('base-darkest')
+
+    }
+}
+
+.USFilterControl__filter--status {
+    svg {
+        width: .7rem;
+        height: .7rem;
+        display: inline-block;
+        vertical-align: middle;
+        fill: currentColor;
+        color: currentColor;
+        path {
+            fill: currentColor;
+            color: currentColor;
+        }
+    }
+    @include u-margin-right(1.5);
+}

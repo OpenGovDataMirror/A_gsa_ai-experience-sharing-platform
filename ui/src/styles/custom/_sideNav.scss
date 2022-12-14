@@ -1,0 +1,37 @@
+
+.usa-sidenav {
+    background-color: color('gray-cool-1');
+    border-bottom: 0;
+    a {
+        text-decoration: underline;
+    }
+}
+
+.usa-sidenav__item {
+    border-top: 0;
+    &.current {
+        background-color: color('base-darkest');
+        color: #ffffff;
+        > a {
+            background-color: color('base-darkest');
+            color: color('gray-cool-1');
+            text-decoration: none;
+        }
+    }
+    .usa-current {
+        color: color('base-darkest');
+        font-weight: 400;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.usa-sidenav__sublist {
+    background-color: #ffffff;
+}
+
+.usa-sidenav .usa-current::after {
+    background-color: initial;
+    color: color('base-darkest');
+}

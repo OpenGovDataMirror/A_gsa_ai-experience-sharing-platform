@@ -1,0 +1,302 @@
+.usa-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @include u-bg("base-darkest");
+  @include u-padding(4);
+  &.is-visible {
+    animation: unset;
+    justify-content: left;
+  }
+
+  .usa-nav__inner {
+    width: 100%;
+  }
+  .usa-nav__link {
+    @include u-color("white");
+    @include u-margin-bottom(2);
+    @include u-font("serif", "lg");
+
+    &:hover {
+      .usa-nav__link-text {
+        @include u-color("white");
+      }
+    }
+    &.usa-accordion__button {
+      @include u-margin-bottom(1);
+    }
+
+    &.usa-current:after {
+      display: none;
+    }
+  }
+  .usa-nav__primary {
+    width: auto;
+    text-align: left;
+    .usa-nav__link {
+      font-weight: 400;
+    }
+    button,
+    a {
+      padding: 0;
+      @include u-font-family("serif");
+      @include u-color("white");
+      &:hover {
+        cursor: pointer;
+        background: transparent;
+        @include u-color("white");
+      }
+
+      .usa-nav__link-prefix {
+        @include u-margin-right(1);
+      }
+      &:not(.usa-button):not(.usa-current) {
+        @include u-color("white");
+      }
+    }
+  }
+
+  .usa-nav__submenu,
+  .usa-nav__primary .usa-accordion__button {
+    background: none;
+    @include u-color("white");
+  }
+  .usa-nav__submenu {
+    @include u-padding-top(1);
+    @include u-padding-left(2);
+    @include u-margin-bottom(2);
+
+    &[hidden] {
+      display: block;
+    }
+    a {
+      @include u-font("sans", 9);
+      font-weight: 400;
+      @include u-margin-bottom(2);
+    }
+  }
+  .usa-nav__link-prefix {
+    @include u-color("secondary");
+  }
+  ul,
+  li {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  .usa-nav__footer {
+    @include u-margin-top(2);
+    @include u-margin-bottom(4);
+    text-align: center;
+    align-self: flex-start;
+  }
+}
+@include at-media("desktop") {
+  .usa-nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    float: none;
+    text-align: left;
+    overflow: unset;
+    &.is-visible {
+      justify-content: space-between;
+    }
+
+    .usa-nav__inner {
+      width: auto;
+    }
+    .usa-nav__footer {
+      display: flex;
+      align-self: center;
+      align-items: center;
+      width: auto;
+      margin: 0;
+      text-align: right;
+    }
+    .usa-nav__primary {
+      .usa-nav__primary-item {
+        display: inline-block;
+      }
+      button {
+        @include u-color("white");
+        &:hover {
+          @include u-color("white");
+          cursor: pointer;
+        }
+      }
+      .usa-nav__link {
+        position: relative;
+        margin: 0;
+        padding: 1rem;
+        @include u-color("white");
+        @include u-font("serif", 3);
+        height: 100%;
+        &.usa-current,
+        &:hover,
+        &:focus,
+        &[aria-expanded="true"] {
+          &:before {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 0.25rem;
+            @include u-bg("primary-lighter");
+          }
+          &:after {
+            bottom: 0;
+            @include u-bg("primary-lighter");
+          }
+        }
+
+        &.usa-current {
+          &:after {
+            top: unset;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: block;
+            width: 100%;
+            height: 0.25rem;
+            border-radius: 0;
+            @include u-bg("primary-lighter");
+          }
+        }
+        &.usa-accordion__button {
+          background: none;
+          margin: 0;
+          &[aria-expanded="true"] {
+            background: none;
+            @include u-bg("base");
+
+            .usa-nav__link-text {
+              &:after {
+                content: "\f106";
+              }
+            }
+          }
+          .usa-nav__link-text {
+            display: block;
+            padding-right: 0 !important;
+            &:after {
+              display: inline-block;
+              @include u-color("secondary");
+              @include u-margin-left(2);
+              background: transparent;
+              content: "\f107";
+              font-family: "Font Awesome 5 Free Solid";
+            }
+          }
+        }
+      }
+      .usa-nav__submenu {
+        display: block;
+        @include u-padding-y(3);
+        @include u-padding-x(4);
+        @include u-bg("primary");
+        font-weight: 400;
+        &[hidden] {
+          display: none;
+        }
+        a {
+          @include u-margin-bottom(0);
+          @include u-font("sans", 4);
+          font-weight: 400;
+
+          &:hover {
+            @include u-color("white");
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .usa-nav__link-prefix {
+      display: block;
+      margin-right: 0 !important;
+      padding-right: 0 !important;
+      @include u-margin-bottom(1);
+    }
+
+
+  .usa-nav__footer {
+    .usa-nav__primary {
+      .usa-nav__link:after, .usa-nav__link:hover:after {
+        @include add-background-svg("chevron");
+        background-color: transparent;
+        content: "";
+        width: .75rem;
+        height: 1rem;
+        position: static;
+        filter: invert(1);
+        margin-left: .5rem;
+        top: unset;
+        bottom: unset;
+        left: unset;
+        display: inline-block;
+        background-position: center center;
+        background-size: contain;
+      }
+    }
+  }
+  }
+}
+@include at-media("desktop-lg") {
+  .usa-nav {
+    .usa-header--basic & {
+      justify-content: space-between;
+    }
+    .usa-nav__footer {
+      .usa-button {
+        width: auto;
+        @include u-font("serif", 7);
+      }
+    }
+    .usa-nav__primary {
+      .usa-nav__link {
+        padding: 1.75rem 1.25rem;
+        @include u-font("serif", 8);
+      }
+    }
+  }
+}
+
+.usa-nav-open,
+.usa-nav-close {
+  display: inline-block;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  width: 30px;
+  height: 30px;
+  background: none;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: center;
+  background-size: contain;
+
+  @include u-color("white");
+  @include at-media("desktop") {
+    display: none;
+  }
+  &:hover {
+    background-color: transparent;
+    opacity: 0.8;
+  }
+}
+
+.CustomText {
+  &__prefix,
+  &__suffix {
+    
+  }
+}

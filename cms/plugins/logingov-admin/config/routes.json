@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/token",
+      "handler": "logingov-admin.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/events",
+      "handler": "logingov-events.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/refresh",
+      "handler": "logingov-refresh.index",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

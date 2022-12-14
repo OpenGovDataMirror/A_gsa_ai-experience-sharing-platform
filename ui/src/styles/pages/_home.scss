@@ -1,0 +1,59 @@
+$bgImgDir: "~styles/images";
+
+
+.US__homepage {
+  .margin-bottom-4.usa-hero-container {
+    margin-bottom: 0;
+  }
+
+  .usa-hero {
+    position: relative;
+    background-size: cover;
+
+  }
+
+  .usa-hero-bg {
+    background-color: #292a2b;
+    border-bottom: 2px solid $coePrimaryLightest;
+  }
+  .US__homepage-content {
+    padding-top: 0;
+    
+    .intro {
+      @include u-font('sans', 'md');
+      
+      p:first-child {
+        @include u-font('serif', 'xl');
+        @include u-line-height('serif', 3);
+        margin-top: 0;
+      }
+    }
+    
+    .home-resilience-challenge-bg {
+      background: #0C0B2A url("~styles/images/challenge_background.png") no-repeat center right;
+      background-size: cover;
+      color: #fff;
+      padding-top: 3rem;
+      a, a:visited {
+        color: $coePrimaryLightest;
+      }
+      a:hover, a:active {
+        color: #FFF;
+      }
+      a.link-external {
+        background-image: url("data:image/svg+xml,%3Csvg width='15' height='14' viewBox='0 0 15 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.31384 3.31358L4.31384 4.48163L8.94046 4.48577L3.89964 9.52659L4.72804 10.355L9.76886 5.31417L9.76472 9.94079L10.941 9.94079V3.31358H4.31384Z' fill='%23B4E6FF'/%3E%3Crect x='0.5' y='0.5' width='13' height='13' stroke='%23B4E6FF'/%3E%3C/svg%3E%0A");
+        padding-right: 1.5rem;
+        background-size: 1rem;
+        background-position: center right;
+        background-repeat: no-repeat;
+      }
+      img {
+        width: 20rem;
+      }
+    }
+  }
+
+  p, .usa-prose > p {
+    max-width: initial;
+  }
+}

@@ -1,0 +1,49 @@
+
+
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+
+.usa-app, html {
+    background: white;
+    color: $coePrimaryDarkest;
+}
+
+main#main-content {
+    border: none;
+    min-height: calc(100vh - 600px);
+}
+
+
+.USFilterControl.usa-accordion {
+    @include u-margin-bottom(2);
+}
+
+.usa-accordion__button[aria-expanded="false"] {
+    @include add-background-svg("chevron");
+}
+
+.usa-accordion__button {
+    @include add-background-svg("chevron");
+}
+
+.US__content .grid-bg {
+    @include u-padding-top(4);
+}
+
+.Login__link {
+    img {
+        display: block;
+        margin: .5rem auto 0 auto;
+    }
+}
+
+p, .usa-prose > p {
+    max-width: initial;
+}
+
+
+
+.usa-banner__header, .usa-banner__content, .usa-banner, .usa-header, .usa-nav {
+    background: $coePrimaryDarkest;
+}
